@@ -22,7 +22,7 @@ namespace TestTask.Services.Implementations
 
         public Task<List<User>> GetUsers()
         {
-            var result =  _applicationDbContext.Users.Where(x => x.Status >= Enums.UserStatus.Inactive).ToListAsync();
+            var result =  _applicationDbContext.Users.Where(x => x.Status == Enums.UserStatus.Inactive).ToListAsync();
 
             return result;
         }
